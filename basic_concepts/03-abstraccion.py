@@ -27,9 +27,9 @@ class UsuarioConcreto(UsuarioBase):
     
 
 usuario1 = UsuarioConcreto(
-    nombre="aaron", 
-    apellido="jim", 
-    correo="a@gmail.com", 
+    nombre="Bill", 
+    apellido="Gates", 
+    correo="bg@gmail.com", 
     password="123", 
     telefono="12345"
 )
