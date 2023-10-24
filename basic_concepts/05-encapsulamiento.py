@@ -22,9 +22,9 @@ class Usuario:
 
 
 usuario1 = Usuario(
-    nombre="Kevin",
-    apellido="Guzman",
-    correo="kevin@gmail.com",
+    nombre="Mark",
+    apellido="Zokenber",
+    correo="mzok@gmail.com",
     contrasenia="test",
     telefono="1234",
 )
