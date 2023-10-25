@@ -9,18 +9,18 @@ class Shape:
         pass
 
 
-class Circulo(Shape):
+class Circle(Shape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius * 2, radius * 2)
         self.radius = radius
 
     def draw(self):
         print(
-            f"Imprimiendo la forma de un circulo {self.x}, {self.y} y su radio es {self.radius}"
+            f"Printing the shape of a circle {self.x}, {self.y} and its radius is {self.radius}"
         )
 
 
-class Tringulo(Shape):
+class Triangle(Shape):
     def __init__(self, x, y, base, height):
         super().__init__(x, y, height, base)
         self.base = base
@@ -28,24 +28,24 @@ class Tringulo(Shape):
 
     def draw(self):
         print(
-            f"Impriendo un triangulo en {self.x}, {self.y} con una base {self.base} y una altura {self.height}"
+            f"Printing a triangle in {self.x}, {self.y} with a base {self.base} and a height {self.height}"
         )
 
 
-class Rectangulo(Shape):
+class Rectangle(Shape):
     def __init__(self, x, y, height, width):
         super().__init__(x, y, height, width)
 
     def draw(self):
         print(
-            f"Imprimiendo un rectangulo con sus medidas {self.x}, {self.y} y con su ancho de {self.width}, y altura de {self.height}"
+           f"Printing a rectangle with its measurements {self.x}, {self.y} and with its width of {self.width}, and height of {self.height}"
         )
 
 
-circulo = Circulo(x=50, y=50, radius=25)
-tringulo = Tringulo(x=100, y=100, base=50, height=150)
-rectangulo = Rectangulo(x=300, y=200, width=200, height=100)
+cir = Circle(x=50, y=50, radius=25)
+tri = Triangle(x=100, y=100, base=50, height=150)
+rec = Rectangle(x=300, y=200, height=100, width=200)
 
-circulo.draw()
-tringulo.draw()
-rectangulo.draw()
+cir.draw()
+tri.draw()
+rec.draw()
