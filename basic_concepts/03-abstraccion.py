@@ -1,6 +1,15 @@
+"""
+The abstraction allows us to create a simplified version 
+of an object that contains only the information necessary 
+for our program. This simplified version is called an abstract 
+class. An abstract class is like a template that defines the 
+common characteristics of a group of objects.
+"""
+
 from cryptocode import encrypt, decrypt
 from abc import ABC, abstractmethod
 
+# abstract class
 class UserBase(ABC):
     def __init__(self, name, lastname, email, password, phone):
         self.name = name
