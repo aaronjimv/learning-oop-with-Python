@@ -1,33 +1,33 @@
-class Usuario:
-    def __init__(self, nombre, apellido, contrasenia, correo, telefono):
+class User:
+    def __init__(self, name, lastname, password, email, phone):
         # atributos publicos
-        self.nombre = nombre
-        self.apellido = apellido
-        self.contrasenia = self.encriptarContrasenia(contrasenia)
-        self.correo = correo
+        self.name = name
+        self.lastname = lastname
+        self.password = self.encryptPassword(password)
+        self.email = email
         # atributos privados
-        self.__telefono = telefono
+        self.__phone = phone
 
-    def obtener_telefono(self):
-        return self.__telefono
+    def get_phone(self):
+        return self.__phone
 
-    def actualizar_telefono(self, nuevo_telefono):
-        self.__telefono = nuevo_telefono
+    def update_phone(self, new_phone):
+        self.__phone = new_phone
 
-    def encriptarContrasenia(self, contrasenia):
+    def encryptPassword(self, password):
         pass
 
-    def verificarContrasenia(self, contrasenia):
+    def checkPassword(self, password):
         pass
 
 
-usuario1 = Usuario(
-    nombre="Mark",
-    apellido="Zokenber",
-    correo="mzok@gmail.com",
-    contrasenia="test",
-    telefono="1234",
+user1 = User(
+    name="Mark",
+    lastname="Zokenber",
+    email="mzok@gmail.com",
+    password="test",
+    phone="1234",
 )
 
-usuario1.actualizar_telefono(5678)
-print(usuario1.obtener_telefono())
+user1.update_phone(5678)
+print(user1.get_phone())
