@@ -1,25 +1,25 @@
 # ejemplo de clases
-class Ususario():
-    def __init__(self, nombre, apellido, correo, password, telefono):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.correo = correo
+class User():
+    def __init__(self, name, lastname, email, password, phone):
+        self.name = name
+        self.lastname = lastname
+        self.email = email
         self.password = password
-        self.telefono = telefono
+        self.phone = phone
 
-    def encriptarContrasena(self):
+    def encryptPassword(self):
         pass
 
-    def verificarContrasena(self):
+    def checkPassword(self):
         pass
 
-usuario1 = Ususario(
-    nombre="Bill", 
-    apellido="Gates", 
-    correo="bg@gmail.com", 
+user1 = User(
+    name="Bill", 
+    lastname="Gates", 
+    email="bg@gmail.com", 
     password="123", 
-    telefono="12345"
+    phone="12345"
     )
 
-print(usuario1.nombre)
-print(usuario1.apellido)
+print(user1.name)
+print(user1.lastname)
