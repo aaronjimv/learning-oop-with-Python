@@ -1,45 +1,45 @@
-class Usuario:
-    def __init__(self, nombre, apellido, contrasenia):
+class User:
+    def __init__(self, name, lastname, password):
         # atributos publicos
-        self._nombre = nombre
-        self._apellido = apellido
-        self._contrasenia = self.encriptarContrasenia(contrasenia)
+        self._name = name
+        self._lastname = lastname
+        self._password = self.encryptPassword(password)
 
-    def encriptarContrasenia(self, contrasenia):
+    def encryptPassword(self, password):
         pass
 
-    def verificarContrasenia(self, contrasenia):
+    def checkPassword(self, password):
         pass
 
     # getter
     @property
-    def nombre(self):
-        return self._nombre
+    def name(self):
+        return self._name
     
     # setter
-    @nombre.setter
-    def nombre(self, nombre):
-        self._nombre = nombre
+    @name.setter
+    def name(self, name):
+        self._name = name
 
     # getter
     @property
-    def apellido(self):
-        return self._apellido
+    def lastname(self):
+        return self._lastname
     
     # setter
-    @apellido.setter
-    def apellido(self, apellido):
-        self._apellido = apellido
+    @lastname.setter
+    def lastname(self, lastname):
+        self._lastname = lastname
 
 
 # instancia
-usuario1 = Usuario("Echiro", "Oda", "test")
-print(usuario1.nombre)
-print(usuario1.apellido)
+user1 = User("Echiro", "Oda", "test")
+print(user1.name)
+print(user1.name)
 
 print("---")
 
-usuario1.nombre = "Hiro"
-usuario1.apellido = "Mashima"
-print(usuario1.nombre)
-print(usuario1.apellido)
+user1.name = "Hiro"
+user1.lastname = "Mashima"
+print(user1.name)
+print(user1.lastname)
