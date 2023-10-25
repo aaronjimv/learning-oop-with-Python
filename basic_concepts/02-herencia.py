@@ -1,43 +1,44 @@
-class Vehiculo:
+class Vehicle:
     # atributos
-    def __init__(self, marca, modelo, velocidad, anio):
-        self.marca = marca
-        self.modelo = modelo
-        self.velocidad = velocidad
-        self.anio = anio
+    def __init__(self, brand, model, speed, year):
+        self.brand = brand
+        self.model = model
+        self.speed = speed
+        self.year = year
 
     # métodos
-    def darVelocidad(self, velocidad):
-        self.velocidad += velocidad
+    def moreSpeed(self, speed):
+        self.speed += speed
 
-    def reducirVelocidad(self, velocidad):
-        self.velocidad -= velocidad
+    def leesSpeed(self, speed):
+        self.speed -= speed
 
 
-class Motocicleta(Vehiculo):
-    def __init__(self, marca, modelo, velocidad, anio, motor):
-        super().__init__(marca, modelo, velocidad, anio)
-        self.motor = motor
+class Motorcycle(Vehicle):
+    def __init__(self, brand, model, speed, year, engiene):
+        super().__init__(brand, model, speed, year)
+        self.engiene = engiene
 
     # hacer caballito
-    def Wheelie(self):
-        return "Haciendo el wheelie..."
+    def wheeliee(self):
+        return "Doing wheelie..."
 
 
-class Autobus(Vehiculo):
-    def __init__(self, marca, modelo, velocidad, anio, asientos):
-        super().__init__(marca, modelo, velocidad, anio)
-        self.asientos = asientos
+class Bus(Vehicle):
+    def __init__(self, brand, model, speed, year, seats):
+        super().__init__(brand, model, speed, year)
+        self.seats = seats
 
-    def cargarPasajeros(self, pasajeros):
-        return f"pasajero a bordo {pasajeros}"
+    def getonPassengers(self, passengers):
+        return f"passengers on board {passengers}"
 
 
-motocicleta = Motocicleta("Honda", 2022, 100, 2023, 1200)
-# print(motocicleta.marca)
-# print(motocicleta.Wheelie())
-autobus = Autobus(
-    marca="Blubird", modelo=2010, velocidad=100, anio=2000, asientos=30
-)
-print(autobus.marca)
-print(autobus.cargarPasajeros(60))
+moto = Motorcycle("Harley Davidson", 2023, 100, 2023, 1200)
+print(moto.brand)
+print(moto.wheeliee())
+
+print()
+
+bus = Bus("Vw", "Bus One", "100", "2020", "50" )
+print(bus.brand)
+print(bus.getonPassengers(bus.seats))
