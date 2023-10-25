@@ -1,4 +1,11 @@
-# ejemplo de clases
+"""
+A class in object-oriented programming (OOP) is like a mold for 
+creating objects. That is, a class is a template that defines how 
+certain types of objects are constructed. Every time an object is 
+built from a class, what is called an instance of that class is created.
+"""
+
+# this is a class
 class User():
     def __init__(self, name, lastname, email, password, phone):
         self.name = name
@@ -13,6 +20,7 @@ class User():
     def checkPassword(self):
         pass
 
+# this is a instance
 user1 = User(
     name="Bill", 
     lastname="Gates", 
