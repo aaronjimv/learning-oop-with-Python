@@ -1,38 +1,39 @@
 from cryptocode import encrypt, decrypt
 from abc import ABC, abstractmethod
 
-class UsuarioBase(ABC):
-    def __init__(self, nombre, apellido, correo, password, telefono):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.correo = correo
-        self.password = self.encriptarContrasena(password)
-        self.telefono = telefono
+class UserBase(ABC):
+    def __init__(self, name, lastname, email, password, phone):
+        self.name = name
+        self.lastname = lastname
+        self.email = email
+        self.password = self.encryptPassword(password)
+        self.phone = phone
 
     @abstractmethod
-    def encriptarContrasena(self):
+    def encryptPassword(self):
         pass
 
     @abstractmethod
-    def verificarContrasena(self):
+    def checkPassword(self):
         pass
 
-class UsuarioConcreto(UsuarioBase):
-    def encriptarContrasena(self, password):
+class UserParticular(UserBase):
+    def encryptPassword(self, password):
         return encrypt(password, "secret")
     
-    def verificarContrasena(self, password):
-        descencripted_password = decrypt(self.password, "secret")
-        return descencripted_password == password
+    def checkPassword(self, password):
+        decrypted_password = decrypt(self.password, "secret")
+        return decrypted_password == password
     
 
-usuario1 = UsuarioConcreto(
-    nombre="Bill", 
-    apellido="Gates", 
-    correo="bg@gmail.com", 
+user1 = UserParticular(
+    name="Bill", 
+    lastname="Gates", 
+    email="bg@gmail.com", 
     password="123", 
-    telefono="12345"
+    phone="12345"
 )
 
-print(usuario1.password)
-print(usuario1.verificarContrasena("123"))
+print(user1.password)
+print(user1.checkPassword("123"))
+print(user1.checkPassword("abc"))
