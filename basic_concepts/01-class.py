@@ -27,7 +27,7 @@ user1 = User(
     email="bg@gmail.com", 
     password="123", 
     phone="12345"
-    )
+)
 
 print(user1.name)
 print(user1.lastname)
