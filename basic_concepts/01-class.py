@@ -13,6 +13,13 @@ class Ususario():
     def verificarContrasena(self):
         pass
 
-usuario1 = Ususario(nombre="Bill", apellido="Gates", correo="bg@gmail.com", password="123", telefono="12345")
+usuario1 = Ususario(
+    nombre="Bill", 
+    apellido="Gates", 
+    correo="bg@gmail.com", 
+    password="123", 
+    telefono="12345"
+    )
+
 print(usuario1.nombre)
 print(usuario1.apellido)
