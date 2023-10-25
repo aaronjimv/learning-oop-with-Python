@@ -1,11 +1,11 @@
 class User:
     def __init__(self, name, lastname, password, email, phone):
-        # atributos publicos
+        # public attributes
         self.name = name
         self.lastname = lastname
         self.password = self.encryptPassword(password)
         self.email = email
-        # atributos privados
+        # private attributes
         self.__phone = phone
 
     def get_phone(self):
