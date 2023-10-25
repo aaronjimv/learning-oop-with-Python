@@ -1,28 +1,33 @@
+"""
+The inheritance in object-oriented programming (OOP) is a mechanism 
+that allows creating new classes from existing ones. In other words, 
+a child class inherits the attributes and methods of its parent class. 
+This means that the child class can use the same attributes and methods
+ as its parent class, as well as add new attributes and methods of its own.
+"""
+
 class Vehicle:
-    # atributos
+    # attributes
     def __init__(self, brand, model, speed, year):
         self.brand = brand
         self.model = model
         self.speed = speed
         self.year = year
 
-    # métodos
+    # methods
     def moreSpeed(self, speed):
         self.speed += speed
 
     def leesSpeed(self, speed):
         self.speed -= speed
 
-
 class Motorcycle(Vehicle):
     def __init__(self, brand, model, speed, year, engiene):
         super().__init__(brand, model, speed, year)
         self.engiene = engiene
 
-    # hacer caballito
     def wheeliee(self):
         return "Doing wheelie..."
-
 
 class Bus(Vehicle):
     def __init__(self, brand, model, speed, year, seats):
