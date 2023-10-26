@@ -9,5 +9,12 @@ class BaseClass:
     def update_contact(self):
         pass
 
+    def search_contact(self):
+        pass
+
+    @classmethod
+    def all_contacts(cls):
+        return cls.contacts
+
 class Contacts(BaseClass):
     pass
