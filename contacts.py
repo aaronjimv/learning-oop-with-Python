@@ -20,4 +20,8 @@ class Contacts(BaseClass):
     def add(self, name, email, phone):
         self.add_contact(name, email, phone)
 
+    def show_all_contacts(self):
+        contacts = self.all_contacts()
+        for contact in contacts:
+            print(f"{contact['name'] - {contact['email']} - {contact['phone']}}")
     
