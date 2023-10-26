@@ -3,15 +3,35 @@ from menu import MainMenu
 
 if __name__ == '__main__':
     while True:
-        match(1):
+        option = MainMenu.showMainMenu() 
+        contacts = Contacts()
+
+        match(option):
             case 1: # add contact
-                pass
+                MainMenu.showMenuAddContact()
+                name, email, phone = MainMenu.addConact()
+                contacts.add(name, email, phone)
             case 2: # contact list
-                pass
+                MainMenu.showMenuAllContact()
+                contacts.show_all_contacts()
             case 3: # search contacr
-                pass
+                MainMenu.showMenuSearchContact()
+                email = MainMenu.searchContact()
+                contact = contacts.search(email)
+                if contact:
+                    print(contact)
+                else:
+                    print("This contact does not exits.")
             case 4: # update contact
-                pass
+                MainMenu.showMenuUpdate()
+                MainMenu.showMenuAllContact()
+                contacts.show_all_contacts()
+                email = MainMenu.searchContact()
+                contact = contacts.search(email)
+                if contact:
+                    name, phone = MainMenu.getConatactData()
+                    response = contacts.update_contact(contact["email"], name, phone)
+                    print("This contact was updated succefully!")
             case 5: # close app
                 print("\nGood Bye!")
                 break
