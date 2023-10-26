@@ -17,4 +17,7 @@ class BaseClass:
         return cls.contacts
 
 class Contacts(BaseClass):
-    pass
+    def add(self, name, email, phone):
+        self.add_contact(name, email, phone)
+
+    
