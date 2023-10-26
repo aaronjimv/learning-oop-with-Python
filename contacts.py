@@ -25,3 +25,8 @@ class Contacts(BaseClass):
         for contact in contacts:
             print(f"{contact['name'] - {contact['email']} - {contact['phone']}}")
     
+    def search(self):
+        pass
+
+    def update(self):
+        pass
