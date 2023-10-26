@@ -30,7 +30,7 @@ if __name__ == '__main__':
                 contact = contacts.search(email)
                 if contact:
                     name, phone = MainMenu.getConatactData()
-                    response = contacts.update_contact(contact["email"], name, phone)
+                    response = contacts.update(contact["email"], name, phone)
                     print("This contact was updated succefully!")
             case 5: # close app
                 print("\nGood Bye!")
