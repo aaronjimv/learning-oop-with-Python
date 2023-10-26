@@ -17,3 +17,49 @@ class MainMenu():
             option = int(input("Choose one option: "))
         else:
             return option
+        
+    @staticmethod
+    def showMenuAddContact():
+        print("-------------------")
+        print("    ADD CONTACT   ")
+        print("-------------------")
+
+    @staticmethod
+    def addConact():
+        name = input("Enter the name: ")
+        email = input("Enter the email: ")
+        phone = input("Enter the phone: ")
+        return name, email, phone
+    
+    @staticmethod
+    def showMenuAllContact():
+        print("-------------------")
+        print("   CONTACTS LIST   ")
+        print("-------------------")
+        print("Name     | Email     | Phone     ")
+
+    @staticmethod
+    def showMenuSearchContact():
+        print("-------------------")
+        print("  SEARCH CONTACT  ")
+        print("-------------------")
+        
+    @staticmethod
+    def searchContact():
+        return input("Enter the contact's email: ")
+
+    @staticmethod
+    def showMenuUpdate():
+        print("-------------------")
+        print("  UPDATE CONTACT  ")
+        print("-------------------")
+
+    @staticmethod
+    def getContactEmail():
+        return input("Enter the contact's email: ")
+    
+    @staticmethod
+    def getConatactData():
+        name = input("Enter the name: ")
+        phone = input("Enter the phone: ")
+        return name, phone
