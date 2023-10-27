@@ -6,6 +6,20 @@ This means that the child class can use the same attributes and methods
  as its parent class, as well as add new attributes and methods of its own.
 """
 
+"""
+Attributes are the properties or characteristics that define an object, 
+such as its color, size, shape, etc. Methods are the actions or behaviors 
+that an object can perform, such as moving, speaking, calculating, etc.
+"""
+
+"""
+__init__ defines a special method called the class's constructor. 
+This method is executed automatically when an instance of the class 
+is created, that is, an object of type User. The first parameter self 
+refers to the object itself, and the other parameters are the attributes 
+that are assigned to the object.
+"""
+
 class Vehicle:
     # attributes
     def __init__(self, brand, model, speed, year):
@@ -14,10 +28,11 @@ class Vehicle:
         self.speed = speed
         self.year = year
 
-    # methods
+    # method
     def moreSpeed(self, speed):
         self.speed += speed
 
+    # method
     def leesSpeed(self, speed):
         self.speed -= speed
 
