@@ -10,7 +10,7 @@ from cryptocode import encrypt, decrypt
 from abc import ABC, abstractmethod
 
 # abstract class
-class UserBase(ABC):
+class BaseClass(ABC):
     def __init__(self, name, lastname, email, password, phone):
         self.name = name
         self.lastname = lastname
@@ -26,7 +26,7 @@ class UserBase(ABC):
     def checkPassword(self):
         pass
 
-class UserParticular(UserBase):
+class User(BaseClass):
     def encryptPassword(self, password):
         return encrypt(password, "secret")
     
@@ -35,7 +35,7 @@ class UserParticular(UserBase):
         return decrypted_password == password
     
 
-user1 = UserParticular(
+user1 = User(
     name="Bill", 
     lastname="Gates", 
     email="bg@gmail.com", 
