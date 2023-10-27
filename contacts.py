@@ -32,8 +32,8 @@ class Contacts(BaseClass):
     def show_all_contacts(self):
         contacts = self.all_contacts()
         for contact in contacts:
-            print(f"{contact['name'] - {contact['email']} - {contact['phone']}}")
-    
+            #print(f"{contact['name'] - {contact['email']} - {contact['phone']}}")
+            print(f"{contact['name']} - {contact['email']} - {contact['phone']}")
     def search(self, email):
         return self.search_contact(email)
 
