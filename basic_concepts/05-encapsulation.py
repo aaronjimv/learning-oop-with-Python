@@ -1,3 +1,11 @@
+"""
+Encapsulation is one of the fundamental concepts in 
+object-oriented programming (OOP) that allows us to restrict 
+access to certain methods and variables within a class, 
+ensuring that the data is hidden and safe from any 
+unintentional modifications.
+"""
+
 class User:
     def __init__(self, name, lastname, password, email, phone):
         # public attributes
