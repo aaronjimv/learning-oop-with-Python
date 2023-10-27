@@ -14,8 +14,12 @@ class BaseClass:
             return True
         return False
 
-    def search_contact(self):
-        pass
+    @classmethod
+    def search_contact(cls, email):
+        for contact in cls.contacts:
+            if contact["email"] == email:
+                return contact
+        return None
 
     @classmethod
     def all_contacts(cls):
@@ -30,8 +34,8 @@ class Contacts(BaseClass):
         for contact in contacts:
             print(f"{contact['name'] - {contact['email']} - {contact['phone']}}")
     
-    def search(self):
-        pass
+    def search(self, email):
+        return self.search_contact(email)
 
     def update(self, email, name, phone):
         return self.update_contact(email, name, phone)
