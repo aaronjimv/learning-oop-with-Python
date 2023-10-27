@@ -6,6 +6,13 @@ class. An abstract class is like a template that defines the
 common characteristics of a group of objects.
 """
 
+"""
+In order to create abstract classes in Python, it is necessary to 
+import the ABC class and the abstractmethod decorator from the abc 
+(Abstract Base Classes) module. A module that is found in the 
+language's standard library, so it is not necessary to install.
+"""
+
 from cryptocode import encrypt, decrypt
 from abc import ABC, abstractmethod
 
