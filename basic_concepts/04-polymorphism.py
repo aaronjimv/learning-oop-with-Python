@@ -1,3 +1,12 @@
+"""
+Polymorphism  is a concept that describes the 
+ability of an object to take on many forms. 
+In other words, it allows objects of different 
+types to be accessed through the same interface. 
+Each type can provide its own independent implementation 
+of this interface.
+"""
+
 class Shape:
     def __init__(self, x, y, height, width):
         self.x = x
