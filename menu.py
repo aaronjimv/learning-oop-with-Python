@@ -2,6 +2,7 @@ class MainMenu():
     
     @staticmethod
     def showMainMenu():
+        print()
         print("-------------------")
         print("  WORKS CONTACTS   ")
         print("-------------------")
@@ -10,6 +11,7 @@ class MainMenu():
         print("3. Search contact")
         print("4. Edit contact")
         print("5. Close app")
+        print()
         
         option = int(input("Choose one option: "))
         while option > 5 or option < 1:
@@ -20,9 +22,11 @@ class MainMenu():
         
     @staticmethod
     def showMenuAddContact():
+        print()
         print("-------------------")
         print("    ADD CONTACT   ")
         print("-------------------")
+        print()
 
     @staticmethod
     def addConact():
@@ -33,16 +37,20 @@ class MainMenu():
     
     @staticmethod
     def showMenuAllContact():
+        print()
         print("-------------------")
         print("   CONTACTS LIST   ")
         print("-------------------")
         print("Name     | Email     | Phone     ")
+        print()
 
     @staticmethod
     def showMenuSearchContact():
+        print()
         print("-------------------")
         print("  SEARCH CONTACT  ")
         print("-------------------")
+        print()
         
     @staticmethod
     def searchContact():
@@ -50,9 +58,11 @@ class MainMenu():
 
     @staticmethod
     def showMenuUpdate():
+        print()
         print("-------------------")
         print("  UPDATE CONTACT  ")
         print("-------------------")
+        print()
 
     @staticmethod
     def getContactEmail():
