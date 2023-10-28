@@ -1,8 +1,9 @@
 class BaseClass:
-    contacts = [] # contacts list
+    contacts = []  # contacts list
 
-    # save a contact in the list
+    #  save a contact in the list
     def add_contact(self, name, email, phone):
+
         user_data = {"name": name, "email": email, "phone": phone}
         self.contacts.append(user_data)
 
@@ -25,6 +26,7 @@ class BaseClass:
     def all_contacts(cls):
         return cls.contacts
 
+
 class Contacts(BaseClass):
     def add(self, name, email, phone):
         self.add_contact(name, email, phone)
@@ -32,7 +34,10 @@ class Contacts(BaseClass):
     def show_all_contacts(self):
         contacts = self.all_contacts()
         for contact in contacts:
-            print(f"{contact['name']} - {contact['email']} - {contact['phone']}")
+            print(
+                f"{contact['name']} - {contact['email']} - {contact['phone']}"
+            )
+
     def search(self, email):
         return self.search_contact(email)
 
