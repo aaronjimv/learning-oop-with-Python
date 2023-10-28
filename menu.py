@@ -1,5 +1,5 @@
 class MainMenu():
-    
+
     @staticmethod
     def show_main_menu():
         print()
@@ -12,14 +12,14 @@ class MainMenu():
         print("4. Edit contact")
         print("5. Close app")
         print()
-        
+
         option = int(input("Choose one option: "))
         while option > 5 or option < 1:
             print("Invalid option...")
             option = int(input("Choose one option: "))
         else:
             return option
-        
+
     @staticmethod
     def show_menu_add_contact():
         print()
@@ -34,7 +34,7 @@ class MainMenu():
         email = input("Enter the email: ")
         phone = input("Enter the phone: ")
         return name, email, phone
-    
+
     @staticmethod
     def show_menu_all_contact():
         print()
@@ -51,7 +51,7 @@ class MainMenu():
         print("  SEARCH CONTACT  ")
         print("-------------------")
         print()
-        
+
     @staticmethod
     def search_contact():
         return input("Enter the contact's email: ")
@@ -67,7 +67,7 @@ class MainMenu():
     @staticmethod
     def get_contact_email():
         return input("Enter the contact's email: ")
-    
+
     @staticmethod
     def get_conatact_data():
         name = input("Enter the name: ")
