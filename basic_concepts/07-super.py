@@ -1,35 +1,35 @@
-class Mascota:
-    def __init__(self, nombre):
-        self.nombre = nombre
+class Pet:
+    def __init__(self, name):
+        self.name = name
 
-    def juega(self):
-        print(f"La mascota {self.nombre} esta jugando")
-
-
-class Perro(Mascota):
-    def __init__(self, nombre, raza):
-        super().__init__(nombre)
-        self.raza = raza
-
-    def juega(self):
-        super().juega()
-        print(f"El perro de raza {self.raza} juega con su hueso")
+    def play(self):
+        print(f"The pet {self.name} is playing")
 
 
-class PerroDomestico(Perro):
-    def __init__(self, nombre, raza, propietario):
-        super().__init__(nombre, raza)
-        self.propietario = propietario
+class Dog(Pet):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
 
-    def juega(self):
-        super().juega()
-        print(f"El perro domestico mueve la cola")
+    def play(self):
+        super().play()
+        print(f"The {self.breed} breed dog is playing with his bone.")
 
-    def presentarse(self):
+
+class DomesticDog(Dog):
+    def __init__(self, name, breed, owner):
+        super().__init__(name, breed)
+        self.owner = owner
+
+    def play(self):
+        super().play()
+        print(f"The domestic dog wags its tail")
+
+    def introduce(self):
         print(
-            f" Hola, soy {self.nombre}, de raza {self.raza} y mi dueño es {self.propietario} "
+            f"Hi, I'm {self.name}, a {self.breed} and my owner is {self.owner} "
         )
 
-perro_domestico = PerroDomestico("Max", "Pastor aleman", "John Doe")
-perro_domestico.juega()
-perro_domestico.presentarse()
+domestic_dog = DomesticDog("Max", "German Shepherd", "John Doe")
+domestic_dog.play()
+domestic_dog.introduce()
