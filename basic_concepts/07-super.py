@@ -1,3 +1,14 @@
+"""
+super() is a built-in Python function that allows a
+subclass to call a method from its parent class. It
+is used to invoke the superclass’s methods and
+constructors. When a method is called using super(),
+Python searches the superclass hierarchy for the method
+and calls the first one it finds. This is useful when
+the subclass wants to invoke the parent class’s 
+implementation of the method in addition to its own.
+"""
+
 class Pet:
     def __init__(self, name):
         self.name = name
